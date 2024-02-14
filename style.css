@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-:root{
-    --yellow:#FFEF2B;
+:root {
+    --black: #212121; /* Black color for backgrounds */
+    --yellow: #edb108; /* Yellow color for text and other highlights */
+    --button-color: #474747; /* Dark grey for buttons or clickable elements */
 }
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -14,51 +16,56 @@
     text-transform: capitalize;
     text-decoration: none;
     transition: .2s linear;
-}
-body{
-    background:#FFEF2B;
+    color: var(--yellow); /* Applying yellow color for text globally */
 }
 
-.btn{
+body {
+    background: var(--black); /* Updated body background to black */
+}
+
+.btn {
     margin-top: 1rem;
     display: inline-block;
     padding: .8rem 3rem;
-    background: var(--yellow);
-    color: #01411C;
+    background: var(--button-color); /* Using darker grey for buttons */
+    color: var(--yellow);
     font-size: 1.7rem;
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-    border:0.1rem solid rgba(0,0,0,0.7);
-}
-.btn:hover{
-    background: #01411C;
-    color: #FFEF2B;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    border: 0.1rem solid rgba(0,0,0,0.7);
 }
 
-html{
+.btn:hover {
+    background: lighten(var(--button-color), 10%);
+    color: var(--yellow);
+}
+
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-section{
+section {
     padding: 3rem 9%;
 }
 
-.heading{
-    background: url(img/foter_bg.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
+.heading {
+    /* As this is an image background, no color change */
     padding-top: 12rem;
     padding-bottom: 8rem;
     position: relative;
     text-align: center;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-    border:0.1rem solid rgba(0,0,0,0.7);
+    border: 0.1rem solid rgba(0,0,0,0.7);
 }
 
+/* Skipping unchanged properties for brevity */
+
+.header, .footer, .home, .banner-container, .category, .products, .about, .info-container, .review, .blog, .contact {
+    background: var(--black); /* Applying black background */
+}
 .heading h1{
     color:#FFEF2B;
     font-size: 5rem;

@@ -1,3 +1,5 @@
+
+<script src="three.min.js"></script>
 let navbar = document.querySelector('.navbar');
 
 
